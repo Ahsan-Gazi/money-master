@@ -13,6 +13,96 @@
     <header>
         <h1>Monthly Budget</h1>
     </header>
+    <main>
+        <section class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <!-- images -->
+                <img src="Images/Money.jpg" class="img-fluid"
+                style="width:auto;"
+                />
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                <!-- Money -->
+                <h1 class="text-center">Monthly Income</h1>
+                
+    
+
+                <div class="form-group row">
+                    <label for="inputIncome" class="col-sm-2 col-form-label">Income</label>
+                    <div class="col-sm-6">
+                      <input type="number" class="form-control" id="Income" placeholder="Income">
+                    </div>
+                </div>
+
+                  <h1 class="text-center">Expenses</h1>
+                  
+                <div class="form-group row">
+                    <label for="inputFood" class="col-sm-2 col-form-label">Food</label>
+                    <div class="col-sm-6">
+                      <input type="number" class="form-control" id="Food" placeholder="Food">
+                    </div>
+                </div><br/>
+
+                
+                <div class="form-group row">
+                    <label for="inputRent" class="col-sm-2 col-form-label">Rent</label>
+                    <div class="col-sm-6">
+                      <input type="number" class="form-control" id="Rent" placeholder="Rent">
+                    </div>
+                </div><br/>
+
+                
+                <div class="form-group row">
+                    <label for="inputClothes" class="col-sm-2 col-form-label">Clothes</label>
+                    <div class="col-sm-6">
+                      <input type="number" class="form-control" id="Clothes" placeholder="Clothes">
+                    </div>
+                </div><br/>
+
+                <button  type="button" class="btn btn-primary text-center" id="calc-button">Calculate</button>
+
+
+                <div>
+                    <h1>Total Expenses:<span id="total-expenses"></span></h1>
+                </div>
+
+                <div>
+                    <h1>Balance:<span id="total-balance"></span></h1>
+                </div>
+
+                
+                <div class="form-group row">
+                    <label for="inputSave" class="col-sm-2 col-form-label">Save</label>
+                    <div class="col-sm-2">
+                      <input type="text" class="form-control" id="Save" placeholder="Save">
+                      
+                    </div>
+                    <div class="col-sm-2"><label class="text-center">%</label><button type="button" class="btn btn-primary text-center" id="save-button">Save</button></div>
+                </div><br/>
+
+                
+                <div>
+                    <h1>Saving Amount:<span id="saving-amount"></span></h1>
+                </div>
+
+                <div>
+                    <h1>Remaining Balance:<span id="remaining-balance"></span></h1>
+                </div>
+
+                </div>
+              
+                
+            </div>
+
+
+
+            
+        </section>
+        
+ 
+    </main>
     <script src="JS/app.js"></script>
     <script src="JS/bootstrap.min.js"></script>
 </body>
