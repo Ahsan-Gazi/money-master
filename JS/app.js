@@ -37,14 +37,16 @@ document.getElementById('calc-button').addEventListener('click',function(){
 document.getElementById('save-button').addEventListener('click',function(){
     const savings=document.getElementById('saving-amount')
     const reamingBalance=document.getElementById('remaining-balance')
+    const save=document.getElementById('Save').value;
+    const savePercent=parseFloat(save)
 
     let income=document.getElementById('Income').value;
     let  toTalIncome=parseFloat(income)
     let exp=totalPrice();
       
     //   let savings=document.getElementById('saving-amount')
-      savings.innerText=(toTalIncome*20)/100
-      reamingBalance.innerText=((toTalIncome-exp)-(toTalIncome*20)/100)
+      savings.innerText=(toTalIncome*savePercent)/100
+      reamingBalance.innerText=((toTalIncome-exp)-(toTalIncome*savePercent)/100)
 
 
 })
