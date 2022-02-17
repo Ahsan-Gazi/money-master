@@ -15,7 +15,7 @@ let totalCost=totalPrice();
     let Eincome=document.getElementById('Income').value;
     let  toTalIncome=parseFloat(Eincome)
 
-    // let income=document.getElementById('Income').value;
+    
     const food = document.getElementById("Food").value;
     const rent = document.getElementById("Rent").value;
     const cloth = document.getElementById("Clothes").value;
@@ -69,27 +69,11 @@ return false;
 document.getElementById('calc-button').addEventListener('click',function(){
  
   ErrorMessageCalcButton();
-    //   const totalExpense=document.getElementById('total-expenses')
-    
-    //   totalExpense.innerText=totalPrice();
-  
-    //   // --balnce
-    //   let income=document.getElementById('Income').value;
-  
-
-  
-    // let  toTalIncome=parseFloat(income)
-      
-    //   let balance=document.getElementById('total-balance')
-    
-    //   balance.innerText=toTalIncome-totalPrice();
-    
+   
     
 })
 
-// function getSavings(){
-    
-// }
+
 
 function balanceCheck(){
   let totalCost=totalPrice();
@@ -97,7 +81,7 @@ function balanceCheck(){
     let  toTalIncome=parseFloat(Eincome)
     let balance=toTalIncome-totalCost
    return balance
-     console.log(balance)
+    
  }
 
 
@@ -107,7 +91,7 @@ function SavingsCheck(){
      let Eincome=document.getElementById('Income').value;
      let  toTalIncome=parseFloat(Eincome)
 
-    // let IntialBalance=toTalIncome-totalCost
+    
    const checkBalance=balanceCheck();
 
   const save=document.getElementById('Save').value;
@@ -143,18 +127,6 @@ function SavingsCheck(){
 document.getElementById('save-button').addEventListener('click',function(){
   SavingsCheck();
 
-  // const savings=document.getElementById('saving-amount')
-  // const reamingBalance=document.getElementById('remaining-balance')
-  // const save=document.getElementById('Save').value;
-  // const savePercent=parseFloat(save)
-
-  // let income=document.getElementById('Income').value;
-  // let  toTalIncome=parseFloat(income)
-  // let exp=totalPrice();
-    
- 
-  //   savings.innerText=(toTalIncome*savePercent)/100
-  //   reamingBalance.innerText=((toTalIncome-exp)-(toTalIncome*savePercent)/100)
 
 })
 
