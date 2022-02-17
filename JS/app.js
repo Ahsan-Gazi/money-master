@@ -19,8 +19,14 @@ let totalCost=totalPrice();
     const food = document.getElementById("Food").value;
     const rent = document.getElementById("Rent").value;
     const cloth = document.getElementById("Clothes").value;
-    if(Eincome=='' || Eincome==null){
+    if(Eincome=='' || Eincome==null ){
       alert("Please Input Income")
+      return false
+      
+    }
+
+   else if(Eincome<0 ){
+      alert("Please Input Positive number")
       return false
       
     }
@@ -28,14 +34,32 @@ let totalCost=totalPrice();
 alert("Please input food cost")
 return false;
     }
+    else if(food<0){
+      alert("Please input positive number")
+      return false;
+          }
+
     else if(rent=='' || rent==null){
       alert("Please input rent cost")
+      return false;
+    }
+
+    else if(rent<0){
+      alert("Please input positve number")
       return false;
     }
           else if(cloth=='' || cloth==null){
             alert("Please input cloth cost")
             return false;
-          }
+     }
+
+     
+     else if(cloth<0){
+      alert("Please input positive number")
+      return false;
+}
+
+     
 
           else if(toTalIncome<totalCost){
         alert("Income can't be less than total expenses")
@@ -101,6 +125,12 @@ function SavingsCheck(){
     alert("Plese input savings")
     return false;
   }
+
+  if(save<0){
+    alert("Plese input positive number")
+    return false;
+  }
+
   else if(checkBalance<totalSaving){
   alert("You have no sufficient balance to save")
   return false;
