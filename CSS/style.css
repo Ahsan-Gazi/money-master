@@ -15,3 +15,39 @@
             color: white;
         }
    
+        /* .form-group.required .control-label:after {
+            content: "*";
+            color: red;
+        } */
+        
+        .form-group.required.row :after {
+            content: "*";
+            color: red;
+        }
+
+        /* .form-group.row required :after {
+            content: "*";
+            color: red;
+        } */
+
+        /* .col-sm-2 .col-form-label.required:after{
+            content: "*";
+            color: red;
+        } */
+
+        #RentRequired :after{
+            content: "*";
+            color: red;
+        }
+        .form-group.required.row .col-sm-2 .col-form-label:after{
+            content: "*";
+            color: red;
+        }
+        .col-sm-2.required :after{
+            content: "*";
+            color: red;
+        }
+        .required :after{
+            content: "*";
+            color: red; 
+        }

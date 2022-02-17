@@ -10,31 +10,118 @@ function totalPrice() {
     
   }
 
+  function ErrorMessageCalcButton(){
+let totalCost=totalPrice();
+    let Eincome=document.getElementById('Income').value;
+    let  toTalIncome=parseFloat(Eincome)
+
+    let income=document.getElementById('Income').value;
+    const food = document.getElementById("Food").value;
+    const rent = document.getElementById("Rent").value;
+    const cloth = document.getElementById("Clothes").value;
+    if(Eincome=='' || Eincome==null){
+      alert("Please Input Income")
+      return false
+      
+    }
+    else if(food=='' || food==null){
+alert("Please input food cost")
+return false;
+    }
+    else if(rent=='' || rent==null){
+      alert("Please input rent cost")
+      return false;
+    }
+          else if(cloth=='' || cloth==null){
+            alert("Please input cloth cost")
+            return false;
+          }
+
+          else if(toTalIncome<totalCost){
+        alert("Income can't be less than total expenses")
+        return false;
+          }
+
+          else{
+
+            const totalExpense=document.getElementById('total-expenses')
+    
+            totalExpense.innerText=totalPrice();
+        
+            // --balnce
+            let income=document.getElementById('Income').value;
+        
+      
+        
+          let  toTalIncome=parseFloat(income)
+            
+            let balance=document.getElementById('total-balance')
+          
+            balance.innerText=toTalIncome-totalPrice();
+          }
+     
+    
+  }
+
 
   
 
 document.getElementById('calc-button').addEventListener('click',function(){
-    // totalPrice()
-    const totalExpense=document.getElementById('total-expenses')
+ 
+  ErrorMessageCalcButton();
+    //   const totalExpense=document.getElementById('total-expenses')
     
-    totalExpense.innerText=totalPrice();
-
-    // --balnce
-    let income=document.getElementById('Income').value;
-  let  toTalIncome=parseFloat(income)
-    
-    let balance=document.getElementById('total-balance')
+    //   totalExpense.innerText=totalPrice();
   
-    balance.innerText=toTalIncome-totalPrice();
+    //   // --balnce
+    //   let income=document.getElementById('Income').value;
+  
+
+  
+    // let  toTalIncome=parseFloat(income)
+      
+    //   let balance=document.getElementById('total-balance')
+    
+    //   balance.innerText=toTalIncome-totalPrice();
+    
+    
 })
 
 // function getSavings(){
     
 // }
 
+function balanceCheck(){
+  let totalCost=totalPrice();
+    let Eincome=document.getElementById('Income').value;
+    let  toTalIncome=parseFloat(Eincome)
+    let balance=toTalIncome-totalCost
+   return balance
+     console.log(balance)
+ }
 
 
-document.getElementById('save-button').addEventListener('click',function(){
+function SavingsCheck(){
+
+  let totalCost=totalPrice();
+     let Eincome=document.getElementById('Income').value;
+     let  toTalIncome=parseFloat(Eincome)
+
+    // let IntialBalance=toTalIncome-totalCost
+   const checkBalance=balanceCheck();
+
+  const save=document.getElementById('Save').value;
+  const savePercent=parseFloat(save)
+  let totalSaving=(toTalIncome*savePercent)/100
+  if(save==''|| save==null){
+    alert("Plese input savings")
+    return false;
+  }
+  else if(checkBalance<totalSaving){
+  alert("You have no sufficient balance to save")
+  return false;
+  }
+  else{
     const savings=document.getElementById('saving-amount')
     const reamingBalance=document.getElementById('remaining-balance')
     const save=document.getElementById('Save').value;
@@ -44,9 +131,33 @@ document.getElementById('save-button').addEventListener('click',function(){
     let  toTalIncome=parseFloat(income)
     let exp=totalPrice();
       
-    //   let savings=document.getElementById('saving-amount')
+   
       savings.innerText=(toTalIncome*savePercent)/100
       reamingBalance.innerText=((toTalIncome-exp)-(toTalIncome*savePercent)/100)
 
+  }
+
+}
+
+
+document.getElementById('save-button').addEventListener('click',function(){
+  SavingsCheck();
+
+  // const savings=document.getElementById('saving-amount')
+  // const reamingBalance=document.getElementById('remaining-balance')
+  // const save=document.getElementById('Save').value;
+  // const savePercent=parseFloat(save)
+
+  // let income=document.getElementById('Income').value;
+  // let  toTalIncome=parseFloat(income)
+  // let exp=totalPrice();
+    
+ 
+  //   savings.innerText=(toTalIncome*savePercent)/100
+  //   reamingBalance.innerText=((toTalIncome-exp)-(toTalIncome*savePercent)/100)
 
 })
+
+
+
+
