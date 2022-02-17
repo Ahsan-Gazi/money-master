@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <h1>Monthly Budget</h1>
+        <h1 class="text-center">Monthly Budget</h1>
     </header>
     <main>
         <section class="container">
@@ -34,9 +34,7 @@
                     <div class="col-sm-6">
                       <input type="number" class="form-control" id="Income" 
                       name="Income" pattern="[0-9]{10}" required
-                        placeholder="Income"
-                      
-                    >
+                        placeholder="Income" >
                     </div>
                 </div>
 
@@ -47,7 +45,7 @@
                     <div class="col-sm-6">
                       <input type="number" class="form-control" id="Food" placeholder="Food">
                     </div>
-                </div><br/>
+                </div>
 
                 
                 <div class="form-group required row">
@@ -55,10 +53,10 @@
                     <div class="col-sm-6">
                       <input type="number" class="form-control" id="Rent" placeholder="Rent">
                     </div>
-                </div><br/>
+                </div>
 
                 
-                <div class="form-group row">
+                <div class="form-group required row">
                     <label for="inputClothes" class="required col-sm-2 col-form-label">Clothes</label>
                     <div class="col-sm-6">
                       <input type="number" class="form-control" id="Clothes" placeholder="Clothes">
@@ -76,22 +74,11 @@
                     <h1>Balance:<span id="total-balance"></span></h1>
                 </div>
 
-<!--                 
-                <div class="form-group row">
-                    <label for="inputSave" class="col-sm-2 col-form-label">Save</label>
-                    <div class="col-sm-2">
-                      <input type="number" class="form-control" id="Save" placeholder="Save">
-                      
-                    </div>
-                    <div class="col-sm-2">
-                        <label class="text-center">%</label>
-                        <button type="button" class="btn btn-primary" id="save-button">Save</button>
-                    </div>
-                </div><br/> -->
+
 
                 <div class="input-group input-group-sm mb-3">
                     <span class="input-group-text" id="inputGroup-sizing-sm">Save:</span>
-                    <input type="number" class="" aria-label="Sizing example input"
+                    <input type="number" class="" style="width:20%;" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-sm" id="Save"><span class=" mx-4">%</span>
                     <button class="btn btn-primary" id="save-button">Save</button>
                 </div>

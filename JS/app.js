@@ -1,4 +1,5 @@
 
+// total expense
 
 function totalPrice() {
     const food = document.getElementById("Food").value;
@@ -9,6 +10,8 @@ function totalPrice() {
   return total;
     
   }
+
+  // function for calculation and error handling
 
   function ErrorMessageCalcButton(){
 let totalCost=totalPrice();
@@ -88,7 +91,7 @@ return false;
   }
 
 
-  
+  // button click for calculation
 
 document.getElementById('calc-button').addEventListener('click',function(){
  
@@ -108,9 +111,10 @@ function balanceCheck(){
     
  }
 
+//  function for saving
 
 function SavingsCheck(){
-
+  
   let totalCost=totalPrice();
      let Eincome=document.getElementById('Income').value;
      let  toTalIncome=parseFloat(Eincome)
@@ -130,6 +134,7 @@ function SavingsCheck(){
     alert("Plese input positive number")
     return false;
   }
+
 
   else if(checkBalance<totalSaving){
   alert("You have no sufficient balance to save")
@@ -153,9 +158,19 @@ function SavingsCheck(){
 
 }
 
+// saving button
 
 document.getElementById('save-button').addEventListener('click',function(){
-  SavingsCheck();
+ 
+  let balance=document.getElementById('total-balance')
+  if(balance.innerText=='' || balance.innerText==null){
+alert('Please, calculate first then press save button or your balance is insufficient');
+return false;
+  }
+  else{
+    SavingsCheck();
+  }
+
 
 
 })
