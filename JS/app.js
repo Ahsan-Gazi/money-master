@@ -15,7 +15,7 @@ let totalCost=totalPrice();
     let Eincome=document.getElementById('Income').value;
     let  toTalIncome=parseFloat(Eincome)
 
-    let income=document.getElementById('Income').value;
+    // let income=document.getElementById('Income').value;
     const food = document.getElementById("Food").value;
     const rent = document.getElementById("Rent").value;
     const cloth = document.getElementById("Clothes").value;
